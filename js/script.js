@@ -1,3 +1,9 @@
+let color = document.getElementById('favcolor');
+color.addEventListener('input', function(e) {
+    document.documentElement.style.setProperty('--main-color', e.target.value);
+    document.documentElement.style.setProperty('--w-mode-main-color', e.target.value);
+});
+
 let changeMode = document.querySelector('.switch input');
 let bodyWhiteMode = document.querySelector('body');
 changeMode.onchange = () =>{

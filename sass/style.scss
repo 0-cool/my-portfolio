@@ -20,7 +20,9 @@
     --w-mode-second-bg-color: #EEEEEE;
     --w-mode-text-color: #1f242d;
 
-    --main-color: #0ef;
+    --main-color: #00EEFF;
+    --w-mode-main-color: #00ABB8;
+    
 }
 html{
     font-size: 62.5%;
@@ -28,15 +30,47 @@ html{
     body{
         background-color: var(--bg-color);
         color: var(--text-color);
-        &.white-mode{
+        &.white-mode{ 
             background-color: var(--w-mode-bg-color);
             color: var(--w-mode-text-color);
-            .btn{ color: var(--w-mode-bg-color); }
+            .btn{ 
+                background-color: var(--w-mode-main-color);
+                box-shadow: 0 0 1rem var(--w-mode-main-color);
+                color: var(--w-mode-bg-color); 
+            }
+            .heading{
+                span{
+                    color: var(--w-mode-main-color);
+                }
+            }
             .header{
                 background-color: var(--w-mode-bg-color);
                 #menu-icon{ color: var(--w-mode-text-color); }
                 &_logo{ color: var(--w-mode-text-color); }
-                &_navbar{ a{ color: var(--w-mode-text-color); } }
+                &_navbar{ 
+                    a{ 
+                    color: var(--w-mode-text-color); 
+                    input{
+                        border: 2px solid var(--w-mode-text-color);
+                    }
+                    &:hover, &.active{
+                        color: var(--w-mode-main-color);
+                    }
+                    } 
+                }
+            }
+            .home{
+                padding: 7rem 9%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_content{
+                    h3{
+                        span{
+                            color: var(--w-mode-main-color);
+                        }
+                    }
+                }
             }
             .about{ background-color: var(--w-mode-second-bg-color); }
             .services{
@@ -44,6 +78,12 @@ html{
                     &_box{
                         background-color: var(--w-mode-second-bg-color);
                         border: .2rem solid var(--w-mode-bg-color);
+                        i{
+                            color: var(--w-mode-main-color);
+                        }
+                        &:hover{
+                            border-color: var(--w-mode-main-color);
+                        }
                     }
                 }
             }
@@ -53,6 +93,11 @@ html{
                     &_box{ 
                         box-shadow: 0 0 1rem var(--w-mode-bg-color); 
                         &_layer{
+                            background: linear-gradient(rgba(0, 0, 0, .1), var(--w-mode-main-color));
+                            h4{
+                                color: var(--w-mode-main-color);
+                                text-shadow: 0 0 1rem var(--w-mode-bg-color);
+                            }
                             a{
                                 background: var(--w-mode-text-color);
                                 i{ color: var(--w-mode-second-bg-color); }
@@ -66,6 +111,12 @@ html{
                     &_box{
                         background-color: var(--w-mode-second-bg-color);
                         border: .2rem solid var(--w-mode-bg-color);
+                        i{
+                            color: var(--w-mode-main-color);
+                        }
+                        &:hover{
+                            border-color: var(--w-mode-main-color);
+                        }
                     }
                 }
             }
@@ -73,6 +124,10 @@ html{
                 background: var(--w-mode-second-bg-color);
                 &_iconTop{
                     a{
+                        background-color: var(--w-mode-main-color);
+                        &:hover{
+                            box-shadow: 0 0 1rem var(--w-mode-main-color);
+                        }
                         i{
                             color: var(--w-mode-second-bg-color);
                         }
@@ -143,6 +198,25 @@ html{
                     margin-left: 4rem;
                     &:hover, &.active{
                         color: var(--main-color);
+                    }
+                    input{
+                        border-radius: 10%;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid var(--text-color);
+                        cursor: pointer;
+                    }
+                    input[type="color"] {
+                        -webkit-appearance: none;
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                    input[type="color"]::-webkit-color-swatch-wrapper {
+                        padding: 0;
+                    }
+                    input[type="color"]::-webkit-color-swatch {
+                        border: none;
                     }
                 }
             }

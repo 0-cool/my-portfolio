@@ -19,7 +19,8 @@
   --w-mode-bg-color: #fff;
   --w-mode-second-bg-color: #EEEEEE;
   --w-mode-text-color: #1f242d;
-  --main-color: #0ef;
+  --main-color: #00EEFF;
+  --w-mode-main-color: #00ABB8;
 }
 
 html {
@@ -38,7 +39,14 @@ html body.white-mode {
 }
 
 html body.white-mode .btn {
+  background-color: var(--w-mode-main-color);
+  -webkit-box-shadow: 0 0 1rem var(--w-mode-main-color);
+          box-shadow: 0 0 1rem var(--w-mode-main-color);
   color: var(--w-mode-bg-color);
+}
+
+html body.white-mode .heading span {
+  color: var(--w-mode-main-color);
 }
 
 html body.white-mode .header {
@@ -57,6 +65,31 @@ html body.white-mode .header_navbar a {
   color: var(--w-mode-text-color);
 }
 
+html body.white-mode .header_navbar a input {
+  border: 2px solid var(--w-mode-text-color);
+}
+
+html body.white-mode .header_navbar a:hover, html body.white-mode .header_navbar a.active {
+  color: var(--w-mode-main-color);
+}
+
+html body.white-mode .home {
+  padding: 7rem 9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body.white-mode .home_content h3 span {
+  color: var(--w-mode-main-color);
+}
+
 html body.white-mode .about {
   background-color: var(--w-mode-second-bg-color);
 }
@@ -66,6 +99,14 @@ html body.white-mode .services_container_box {
   border: 0.2rem solid var(--w-mode-bg-color);
 }
 
+html body.white-mode .services_container_box i {
+  color: var(--w-mode-main-color);
+}
+
+html body.white-mode .services_container_box:hover {
+  border-color: var(--w-mode-main-color);
+}
+
 html body.white-mode .portfolio {
   background-color: var(--w-mode-second-bg-color);
 }
@@ -73,6 +114,16 @@ html body.white-mode .portfolio {
 html body.white-mode .portfolio_container_box {
   -webkit-box-shadow: 0 0 1rem var(--w-mode-bg-color);
           box-shadow: 0 0 1rem var(--w-mode-bg-color);
+}
+
+html body.white-mode .portfolio_container_box_layer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(var(--w-mode-main-color)));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--w-mode-main-color));
+}
+
+html body.white-mode .portfolio_container_box_layer h4 {
+  color: var(--w-mode-main-color);
+  text-shadow: 0 0 1rem var(--w-mode-bg-color);
 }
 
 html body.white-mode .portfolio_container_box_layer a {
@@ -88,8 +139,25 @@ html body.white-mode .contact_container_box {
   border: 0.2rem solid var(--w-mode-bg-color);
 }
 
+html body.white-mode .contact_container_box i {
+  color: var(--w-mode-main-color);
+}
+
+html body.white-mode .contact_container_box:hover {
+  border-color: var(--w-mode-main-color);
+}
+
 html body.white-mode .footer {
   background: var(--w-mode-second-bg-color);
+}
+
+html body.white-mode .footer_iconTop a {
+  background-color: var(--w-mode-main-color);
+}
+
+html body.white-mode .footer_iconTop a:hover {
+  -webkit-box-shadow: 0 0 1rem var(--w-mode-main-color);
+          box-shadow: 0 0 1rem var(--w-mode-main-color);
 }
 
 html body.white-mode .footer_iconTop a i {
@@ -178,6 +246,30 @@ html body .header_navbar a {
 
 html body .header_navbar a:hover, html body .header_navbar a.active {
   color: var(--main-color);
+}
+
+html body .header_navbar a input {
+  border-radius: 10%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-color);
+  cursor: pointer;
+}
+
+html body .header_navbar a input[type="color"] {
+  -webkit-appearance: none;
+}
+
+html body .header_navbar a input[type="color"]:hover {
+  opacity: 0.7;
+}
+
+html body .header_navbar a input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+html body .header_navbar a input[type="color"]::-webkit-color-swatch {
+  border: none;
 }
 
 html body section {
