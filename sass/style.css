@@ -411,7 +411,7 @@ html body .portfolio_container_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 240px;
+  min-height: 310px;
 }
 
 html body .portfolio_container_box:hover img {
@@ -759,12 +759,18 @@ html body input:checked + .slider:before {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  html body .portfolio_container_box {
+    min-height: 255px;
+  }
 }
 
 @media (max-width: 617px) {
   html body .portfolio_container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  html body .portfolio_container_box {
+    min-height: initial;
   }
 }
 
