@@ -292,7 +292,7 @@ html{
                     box-shadow: 0 0 1rem var(--bg-color);
                     overflow: hidden;
                     display: flex;
-                    min-height: 240px;
+                    min-height: 310px;
                     &:hover{
                         img{
                             transform: scale(1.1);
@@ -569,6 +569,9 @@ html{
                 }
                 &_container{
                     grid-template-columns: repeat(2, 1fr);
+                    &_box{
+                        min-height: 255px;
+                    }
                 }
             }
         }
@@ -579,7 +582,10 @@ html{
         body{
             .portfolio{
                 &_container{
-                    grid-template-columns: 1fr;
+                    grid-template-columns: 1fr; 
+                    &_box{
+                        min-height: initial;
+                    }
                 }
             }
         }
