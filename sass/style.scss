@@ -286,6 +286,28 @@ html {
       }
       &_img {
         z-index: -999;
+        position: relative;
+        &_gradient-1{
+          background: linear-gradient(90deg,var(--main-color) 0%,var(--main-color) 100%);
+          filter: blur(900px);
+          width: 40%;
+          height: 35%;
+          z-index: 0;
+          top: 0px;
+          position: absolute;
+          scroll-behavior: smooth;
+        }
+        &_gradient-2{
+          background: var(--main-color);
+          filter: blur(750px);
+          width: 60%;
+          height: 60%;
+          z-index: 0;
+          bottom: 10rem; 
+          position: absolute;
+          scroll-behavior: smooth;
+          border-radius: 9999px;
+        } 
       }
       img {
         width: 35vw;
